@@ -1,0 +1,55 @@
+=========================== AMBIENTE VIRTUAL DJANGO ===========================================
+
+REQUISITOS MINIMOS:
+
+*Python 3.6.4 = proprio site do python em dowload tem o setup do python
+*Django 2.1
+*PIP INSTALADO = Tem que executar o aquivo <get-pip.py>
+*SQLITE padrão do django 
+
+EXECUÇÃO:
+
+Atraves do CMD ou Git bash ou Git cmd entra na pasta <django-api>
+
+Roda o comando de instalação do pip: "python get-pip.py"
+
+após instalar, entra na pasta <venv> e depois entra na pasta <script> e roda o comando: "activate"
+OBS: para ativar o ambiente virtual para instalar só o django dentro da pasta 'django-api' se não a maquina fisica toda ou virtual será afetado
+para isso não acontece vai aparece no cmd (venv) isso mostra que o ambiente está ativado.
+
+depois rola o comando: "pip install django==2.1"
+
+Pronto agora só sair da pasta e ir para a pasta <api> e rola o comando: "Python manage.py runserver"
+Ele irá mostra a url do localhost da sua maquina para o navegador 
+ex: 127.0.0.1:8000
+
+Após isso será redirecionado para pagina inicial do RESTFULL API DJANGO.
+
+OBS: PARA  ACESSAR O BACKEND VOCÊ PRECISA COLOCAR A URL: 127.0.0.1:8000/admin
+
+login: admin
+senha: 123456admin
+
+caso não entre voce pode criar um superusuario e entra no backend o comando é: python manage.py createsuperuser
+e logo criará um usuario super administrador.
+
+URL'S:
+
+127.0.0.1:8000/admin = BACK-END DO SISTEMA
+127.0.0.1:8000/operacoes = API RESTFULL DE OPERAÇÕES
+127.0.0.1:8000/upload = API RESTFULL DE UPLOADS
+127.0.0.1:8000 = RESTFULL API PAGE INICIAL
+
+======================================== CASO O python manage.py runserver DÊ ERROR =====================================================================
+
+após instalado o django pode ser que apareça alguns erros, pedindo para instalar o staticfiles
+pode usar esse comando: pip install django-staticfiles de depois python manage.py staticfiles
+
+caso o *pip esteje desatualizado é bom atualizar no cmd ele coloca o comando para executar
+
+"python -m pip install --upgrade pip"
+
+caso dê algum problema com o preserve_default=True. Vá na pasta migrations, e abre todas as migrações e apaga o "preserve_default=True,"
+
+Obrigado.
+
